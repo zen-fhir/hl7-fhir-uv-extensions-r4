@@ -1,0 +1,10 @@
+{ns hl7-fhir-uv-extensions-r4.cqf-knowledgeRepresentationLevel,
+ import #{hl7-fhir-r4-core.code zen.fhir},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen/desc "Defines a knowledge representation level provided by this knowledge artifact.",
+         :zen.fhir/type "code",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeRepresentationLevel",
+         :zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.code/schema}}}

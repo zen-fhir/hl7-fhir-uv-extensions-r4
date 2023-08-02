@@ -1,0 +1,10 @@
+{ns hl7-fhir-uv-extensions-r4.structuredefinition-interface,
+ import #{zen.fhir hl7-fhir-r4-core.boolean},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen/desc "Marks that the resource definition represents an [interface](uml.html#interface) rather than a resource.",
+         :zen.fhir/type "boolean",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/structuredefinition-interface",
+         :zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.boolean/schema}}}

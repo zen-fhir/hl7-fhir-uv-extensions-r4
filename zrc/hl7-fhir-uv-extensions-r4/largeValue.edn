@@ -1,0 +1,10 @@
+{ns hl7-fhir-uv-extensions-r4.largeValue,
+ import #{hl7-fhir-r4-core.decimal zen.fhir},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen/desc "The value of an integer that exceeds the bounds of the base int type.",
+         :zen.fhir/type "decimal",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/largeValue",
+         :zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.decimal/schema}}}

@@ -1,0 +1,28 @@
+{ns hl7-fhir-uv-extensions-r4.workflow-shallComplyWith,
+ import #{hl7-fhir-r4-core.OperationDefinition
+          hl7-fhir-r4-core.canonical
+          zen.fhir
+          hl7-fhir-r4-core.Measure
+          hl7-fhir-r4-core.uri
+          hl7-fhir-r4-core.ActivityDefinition
+          hl7-fhir-r4-core.Questionnaire
+          hl7-fhir-r4-core.Reference
+          hl7-fhir-r4-core.PlanDefinition},
+ schema {:fhir/polymorphic true,
+         :zen.fhir/version "0.6.30-7",
+         :zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/workflow-shallComplyWith",
+         :type zen/map,
+         :zen/desc "In satisfying this request or instantiating this definition, the expectations defined in the Definition resource are expected to be met.  (This allows requirements defined elsewhere to be brought into play by reference rather than providing all of the detail in-line necessary to satisfy the referenced Definition.).",
+         :keys {:canonical {:confirms #{hl7-fhir-r4-core.canonical/schema}},
+                :Reference {:confirms #{hl7-fhir-r4-core.Reference/schema
+                                        zen.fhir/Reference},
+                            :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Questionnaire/schema
+                                                           hl7-fhir-r4-core.PlanDefinition/schema
+                                                           hl7-fhir-r4-core.ActivityDefinition/schema
+                                                           hl7-fhir-r4-core.OperationDefinition/schema
+                                                           hl7-fhir-r4-core.Measure/schema}}},
+                :uri {:confirms #{hl7-fhir-r4-core.uri/schema}}},
+         :exclusive-keys #{#{:canonical :uri :Reference}}}}

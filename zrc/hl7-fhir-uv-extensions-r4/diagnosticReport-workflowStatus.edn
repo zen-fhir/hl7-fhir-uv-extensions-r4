@@ -1,0 +1,16 @@
+{ns hl7-fhir-uv-extensions-r4.diagnosticReport-workflowStatus,
+ import #{zen.fhir
+          hl7-fhir-r4-core.instant
+          hl7-fhir-r4-core.CodeableConcept},
+ schema {:zen.fhir/version "0.6.30-7",
+         :zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/diagnosticReport-workflowStatus",
+         :require #{:value :timestamp},
+         :type zen/map,
+         :zen/desc "The workflow status of the diagnostic report.",
+         :keys {:value {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+                        :zen/desc "Meaning of the status"},
+                :timestamp {:confirms #{hl7-fhir-r4-core.instant/schema},
+                            :zen/desc "Status timestamp"}}}}

@@ -1,0 +1,10 @@
+{ns hl7-fhir-uv-extensions-r4.elementdefinition-pattern,
+ import #{hl7-fhir-r4-core.canonical zen.fhir},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen/desc "A pattern that all the target resources follow - that is, a pattern that they all declare their relationship to.",
+         :zen.fhir/type "canonical",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/elementdefinition-pattern",
+         :zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.canonical/schema}}}

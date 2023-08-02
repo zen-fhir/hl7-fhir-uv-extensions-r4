@@ -1,0 +1,10 @@
+{ns hl7-fhir-uv-extensions-r4.resource-instance-description,
+ import #{hl7-fhir-r4-core.markdown zen.fhir},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen/desc "A natural language description for non-conformance and non-terminology resource instances that is represented in the resource for publication use.",
+         :zen.fhir/type "markdown",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/resource-instance-description",
+         :zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.markdown/schema}}}

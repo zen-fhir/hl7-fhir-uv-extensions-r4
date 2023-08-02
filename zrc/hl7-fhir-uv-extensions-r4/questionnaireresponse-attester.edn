@@ -1,0 +1,32 @@
+{ns hl7-fhir-uv-extensions-r4.questionnaireresponse-attester,
+ import #{hl7-fhir-r4-core.Device
+          hl7-fhir-r4-core.code
+          zen.fhir
+          hl7-fhir-r4-core.RelatedPerson
+          hl7-fhir-r4-core.dateTime
+          hl7-fhir-r4-core.value-set.composition-attestation-mode
+          hl7-fhir-r4-core.Patient
+          hl7-fhir-r4-core.PractitionerRole
+          hl7-fhir-r4-core.Reference
+          hl7-fhir-r4-core.Practitioner
+          hl7-fhir-r4-core.Organization},
+ schema {:zen.fhir/version "0.6.30-7",
+         :zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-attester",
+         :require #{:mode},
+         :type zen/map,
+         :zen/desc "Allows capturing the individual(s) who attest to the accuracy of the information within the QuestionnaireResponse",
+         :keys {:mode {:confirms #{hl7-fhir-r4-core.code/schema},
+                       :zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.composition-attestation-mode/value-set,
+                                            :strength :required}},
+                :time {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
+                :party {:confirms #{hl7-fhir-r4-core.Reference/schema
+                                    zen.fhir/Reference},
+                        :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Patient/schema
+                                                       hl7-fhir-r4-core.PractitionerRole/schema
+                                                       hl7-fhir-r4-core.Organization/schema
+                                                       hl7-fhir-r4-core.Device/schema
+                                                       hl7-fhir-r4-core.Practitioner/schema
+                                                       hl7-fhir-r4-core.RelatedPerson/schema}}}}}}

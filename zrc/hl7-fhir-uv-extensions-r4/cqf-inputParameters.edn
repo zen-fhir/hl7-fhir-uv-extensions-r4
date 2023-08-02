@@ -1,0 +1,11 @@
+{ns hl7-fhir-uv-extensions-r4.cqf-inputParameters,
+ import #{zen.fhir hl7-fhir-r4-core.Parameters},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen/desc "Specifies the input parameters to the operation (such as a test case description or a data requirements or evaluate operation).",
+         :zen.fhir/type "Reference",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+         :zen.fhir/version "0.6.30-7",
+         :confirms #{zen.fhir/Reference},
+         :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Parameters/schema}}}}

@@ -1,0 +1,9 @@
+{ns hl7-fhir-uv-extensions-r4.immunization-procedure,
+ import #{zen.fhir},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen/desc "A record of the procedure associated with the immunization event.",
+         :zen.fhir/type "CodeableReference",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/immunization-procedure",
+         :zen.fhir/version "0.6.30-7"}}

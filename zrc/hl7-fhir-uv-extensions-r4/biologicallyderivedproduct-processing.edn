@@ -1,0 +1,31 @@
+{ns hl7-fhir-uv-extensions-r4.biologicallyderivedproduct-processing,
+ import #{hl7-fhir-r4-core.Period
+          hl7-fhir-r4-core.Substance
+          zen.fhir
+          hl7-fhir-r4-core.dateTime
+          hl7-fhir-r4-core.string
+          hl7-fhir-r4-core.value-set.procedure-code
+          hl7-fhir-r4-core.Reference},
+ schema {:zen.fhir/version "0.6.30-7",
+         :zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/biologicallyderivedproduct-processing",
+         :require #{:time[x]},
+         :type zen/map,
+         :zen/desc "Extension for processing of a biologically dervied prodcut",
+         :keys {:description {:confirms #{hl7-fhir-r4-core.string/schema},
+                              :zen/desc "Processing of description"},
+                :procedure {:zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.procedure-code/value-set,
+                                                 :strength :example},
+                            :zen/desc "Procesing procedure"},
+                :additive {:confirms #{hl7-fhir-r4-core.Reference/schema
+                                       zen.fhir/Reference},
+                           :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Substance/schema}},
+                           :zen/desc "Substance added during processing"},
+                :time[x] {:fhir/polymorphic true,
+                          :type zen/map,
+                          :exclusive-keys #{#{:dateTime :Period}},
+                          :keys {:dateTime {:confirms #{hl7-fhir-r4-core.dateTime/schema}},
+                                 :Period {:confirms #{hl7-fhir-r4-core.Period/schema}}},
+                          :zen/desc "Time of processing"}}}}

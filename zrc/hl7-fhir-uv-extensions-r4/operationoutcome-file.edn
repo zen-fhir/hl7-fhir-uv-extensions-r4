@@ -1,0 +1,10 @@
+{ns hl7-fhir-uv-extensions-r4.operationoutcome-file,
+ import #{zen.fhir hl7-fhir-r4-core.string},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen/desc "Identifies the source file where the issue is found (when there are multiple source files)",
+         :zen.fhir/type "string",
+         :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/operationoutcome-file",
+         :zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.string/schema}}}
