@@ -7,6 +7,6 @@
          :zen/desc "References a resource or provides a code or text that specifies a substance that is added to a laboratory specimen (part of the container device or added to the specimen indenpendently).",
          :zen.fhir/type "CodeableReference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/specimen-additive",
-         :zen.fhir/version "0.6.30-11",
+         :zen.fhir/version "0.6.30-12",
          :zen.fhir/value-set {:symbol hl7-fhir-uv-extensions-r4.value-set.specimen-additive-substance/value-set,
                               :strength :example}}}
