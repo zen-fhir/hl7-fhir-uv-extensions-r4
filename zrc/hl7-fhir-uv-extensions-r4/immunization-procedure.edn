@@ -6,4 +6,4 @@
          :zen/desc "A record of the procedure associated with the immunization event.",
          :zen.fhir/type "CodeableReference",
          :zen.fhir/profileUri "http://hl7.org/fhir/StructureDefinition/immunization-procedure",
-         :zen.fhir/version "0.6.30-13"}}
+         :zen.fhir/version "0.6.30-14"}}
